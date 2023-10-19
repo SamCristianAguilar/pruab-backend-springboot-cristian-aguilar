@@ -21,7 +21,7 @@ import com.cristianMasterDigital.app.entity.User;
 import com.cristianMasterDigital.app.service.UserService;
 
 @RestController
-@RequestMapping("/api/users")
+@RequestMapping("/api/user")
 public class UserController {
 
 	@Autowired
@@ -51,9 +51,9 @@ public class UserController {
 		if (!oUser.isPresent()) {
 			return ResponseEntity.notFound().build();
 		}
-		
+
 		//oUser.get().getOrders().clear();
-		
+
 		return ResponseEntity.ok(oUser);
 	}
 
